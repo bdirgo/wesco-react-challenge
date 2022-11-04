@@ -48,15 +48,19 @@ function Tours() {
                 </div>
             </div>
             <section className={styles.toursContainer}>
+                <div className='row'>
                 {tourData.map((tour) =>
-                    <TourItem 
-                        key={tour.id}
-                        tour={tour}
+                    <div className='col-lg-4'>
+                        <TourItem 
+                            key={tour.id}
+                            tour={tour}
                             price={getCurrencyConversion(tour.price)}
-                        addToCart={addToCart}
-                        deleteFromCart={deleteFromCart}
-                    />
+                            addToCart={addToCart}
+                            deleteFromCart={deleteFromCart}
+                        />
+                    </div>
                 )}
+                </div>
             </section>
         </>
     );
