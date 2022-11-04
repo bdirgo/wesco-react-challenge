@@ -10,6 +10,7 @@ function Tours() {
 
     const {
         cartTotal,
+        cartCount,
         addToCart,
         deleteFromCart
     } = useCart();
