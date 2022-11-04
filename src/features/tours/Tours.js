@@ -39,7 +39,7 @@ function Tours() {
                     </Select>
                 </div>
                 <div className={styles.cartContainer}>
-                    {cartTotal > 0 ? <span className={styles.cartTotal}>${cartTotal}</span>: null}
+                    {cartTotal > 0 ? <span className={styles.cartTotal}>{getCurrencyConversion(cartTotal)}</span>: null}
                     <ShoppingCartRounded 
                         className={styles.cart}
                         fontSize={'large'}
@@ -52,6 +52,7 @@ function Tours() {
                     <TourItem 
                         key={tour.id}
                         tour={tour}
+                            price={getCurrencyConversion(tour.price)}
                         addToCart={addToCart}
                         deleteFromCart={deleteFromCart}
                     />
