@@ -41,6 +41,7 @@ function Tours() {
                         className={styles.cart}
                         fontSize={'large'}
                     />
+                    {cartCount > 0 ? <span className={styles.counter}>{cartCount}</span>: null}
                 </div>
             </div>
             <section className={styles.toursContainer}>
