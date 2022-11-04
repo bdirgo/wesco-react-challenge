@@ -56,3 +56,32 @@ h2 {
     width: 100%;
     margin: 0 auto;
 }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row > * {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+@media (min-width: 576px) {
+    .col {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+
+@media (min-width: 900px) {
+    .col {
+        flex: 0 0 auto;
+        width: 33.33333333%;
+    }
+}

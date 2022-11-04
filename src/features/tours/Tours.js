@@ -48,9 +48,12 @@ function Tours() {
                 </div>
             </div>
             <section className={styles.toursContainer}>
-                <div className='row'>
+                <div className={styles.row}>
                 {tourData.map((tour) =>
-                    <div className='col-lg-4'>
+                    <div
+                        key={tour.id}
+                        className={styles.col}
+                    >
                         <TourItem 
                             key={tour.id}
                             tour={tour}
